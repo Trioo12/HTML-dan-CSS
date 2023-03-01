@@ -1,4 +1,3 @@
 Rincian materi pelatihan
-HTML
-JS
-dsb
+HTP
+Politeknik Negeri Malang
