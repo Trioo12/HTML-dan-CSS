@@ -1,36 +1,44 @@
 <script>
-    //ada pelanggan membeli barang elektronik
-    //barang barangnya misal ada TV=> 5 juta, motor=> 10 juta, kulkas => 5 juta
-    //tentukan pembelian barangnya apa dan berapa yang dibeli
-    let pegawai = "Trio Prawiro Negoro"
-    let jabatan = "manager"
-    let gaji = 0;
+    let pegawai = "Trio Prawiro Negoro";
+    let jabatan = "Manager";
+    let gajiPokok = 0;
+    let statuss = "menikah";
 
-    switch(produk){
-        case "manager": gaji = 10000000; break;
-        case "Asisten Manager": gaji = 8000000; break;
-        case "staff": gaji = 5000000; break;
-        default: gaji = 0;
+
+    let tunjanganJabatan = 0;
+    let bpjs = 0;
+    let tunjanganKeluarga = 0;
+
+    switch(jabatan){
+        case "Manager": gajiPokok = 10000000; break;
+        case "Asisten Manager": gajiPokok = 8000000; break;
+        case "staff": gajiPokok = 5000000; break;
+        default: gajiPokok = 0;
 
 
     }
-    let  = 1;
-    let bruto = gaji * jumlahbeli;
-    let diskon = 0;
-    let ppn = bruto * 0.11;
 
-    if (produk == "TV") diskon = 0.3 * bruto;
-    else if (produk == "motor") diskon = 0.2 * bruto
-    else diskon = 0.05 * bruto;
+    // menghitung tunjangan jabatan dan bpjs
+    tunjanganJabatan = 0.1 * gajiPokok;
+    bpjs = 0.1 * gajiPokok;
 
-    let hasil_diskon = bruto - diskon;
-    document.write("data pegawai" +
+    // menghitung tunjangan keluarga jika status menikah
+    if (statuss === "menikah") 
+    tunjanganKeluarga = 0.1 * gajiPokok;
+
+
+    // menghitung total pendapatan atau penghasilan
+    let totalPenghasilan = gajiPokok + tunjanganJabatan + tunjanganKeluarga;
+    document.write("Data Pegawai" + 
+        "<br> Nama : " + pegawai +
         "<br> Anda Mempunyai Jabatan Sebagai  : " + jabatan +
-        "<br> jumlah beli produk : " + jumlahbeli +
-        "<br> harga satuan : " + hargasatuan +
-        "<br> Total Gajji : " + bruto +
-        "<br> Diskon : " + diskon +
-        "<br> PPN : " + ppn +
-        "<br> Total Dipotong Diskon : " + hasil_diskon
-        )
+        "<br> Gaji Pokok : Rp." + gajiPokok +
+        "<br> Tunjangan Jabatan : Rp." + tunjanganJabatan +
+        "<br> BPJS : Rp." + bpjs +
+        "<br> Tunjangan Keluarga : Rp." + tunjanganKeluarga +
+        "<br> Total Penghasilan : Rp." + totalPenghasilan
+         )
+
+        
+
 </script>
