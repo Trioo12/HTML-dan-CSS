@@ -1,4 +1,5 @@
 <script>
+    /*pertama**/
     // let pelanggan = "Trio Prawiro Negoro"
     // let totalBelanja = 25000;
     // let keterangan = "";
@@ -14,7 +15,7 @@
 
 
 
-
+    /*kedua**/
     //if multi kondisi
     // let siswa = "Trio"
     // let nilai = 80.5;
@@ -30,34 +31,44 @@
     // document.write(" siswa bernama " + siswa + " dengan Nilai " + nilai + "<br>dengan grade " + grade );
 
 
+
+
+    /*ketiga**/
     //ada pelanggan membeli barang elektronik
     //barang barangnya misal ada TV=> 5 juta, motor=> 10 juta, kulkas => 5 juta
     //tentukan pembelian barangnya apa dan berapa yang dibeli
 
     let pelanggan = "Trio"
-    let produk ="";
+    let produk ="motor";
+    //let diskon = "motor";
 
     //struktur kendali
     if (produk == "TV"){
         hargasatuan = 5000000
 
     }else if(produk == "motor"){
-        hargasatuan = 1000000
+        hargasatuan = 10000000
     }
     else if(produk == "kulkas"){
         hargasatuan = 5000000
     }
     else{
-        hargasatuan = 4000000;
+        hargasatuan = 0;
     }
-    let jumlahbeli = 10;
+    let jumlahbeli = 5;
     let bruto = hargasatuan * jumlahbeli;
 
+    //jika dia membeli motor maka dia akan dapat diskon
+    // if(produk == "motor") diskon = 0.1 * bruto;
+    // else diskon = 0;
+    let diskon = (produk == 'motor') ? 0.1 * bruto : 0;
+    let harga_diskon = bruto - diskon;
     document.write("data pembelian" +
     "<br> pelanggan " + pelanggan +
     "<br> produk yang dibeli " + produk +
-    "<br> Harga satuan " + hargasatuan +
+    "<br> Harga satuan Rp." + hargasatuan +
     "<br> jumlah barang yang dibeli " + jumlahbeli + 
-    "<br> total harga pembelian " + bruto
+    "<br> Total harga pembelian Rp." + bruto + 
+    "<br> Hasil diskon yaitu sebesar Rp." + harga_diskon
     )
 </script>
