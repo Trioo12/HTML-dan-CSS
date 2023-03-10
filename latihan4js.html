@@ -1,13 +1,63 @@
 <script>
-    let pelanggan = "Trio Prawiro Negoro"
-    let totalBelanja = 25000;
-    let keterangan = "";
+    // let pelanggan = "Trio Prawiro Negoro"
+    // let totalBelanja = 25000;
+    // let keterangan = "";
 
-    if(totalBelanja > 20000){
-        keterangan = "selamat anda mendapatkan hadiah";
-    } else {
-        keterangan = "terimakasih sudah berbelanja";
+    // if(totalBelanja > 20000){
+    //     keterangan = "selamat anda mendapatkan hadiah"; //proses dari kondisi
+    // } else {
+    //     keterangan = "terimakasih sudah berbelanja";
+    // }
+
+    // //cetak data
+    // document.write(keterangan);
+
+
+
+
+    //if multi kondisi
+    // let siswa = "Trio"
+    // let nilai = 80.5;
+    // let grade = "";
+
+    // if (nilai > 80 && nilai <= 100) grade = "A"; 
+    // else if (nilai > 75 && nilai <= 80) grade = "B"
+    // else if (nilai > 60 && nilai <= 75) grade = "C"
+    // else if (nilai > 50 && nilai <= 60) grade = "D"
+    // else if (nilai > 0 && nilai <= 50) grade = "E"
+    // else grade = "";
+
+    // document.write(" siswa bernama " + siswa + " dengan Nilai " + nilai + "<br>dengan grade " + grade );
+
+
+    //ada pelanggan membeli barang elektronik
+    //barang barangnya misal ada TV=> 5 juta, motor=> 10 juta, kulkas => 5 juta
+    //tentukan pembelian barangnya apa dan berapa yang dibeli
+
+    let pelanggan = "Trio"
+    let produk ="";
+
+    //struktur kendali
+    if (produk == "TV"){
+        hargasatuan = 5000000
+
+    }else if(produk == "motor"){
+        hargasatuan = 1000000
     }
+    else if(produk == "kulkas"){
+        hargasatuan = 5000000
+    }
+    else{
+        hargasatuan = 4000000;
+    }
+    let jumlahbeli = 10;
+    let bruto = hargasatuan * jumlahbeli;
 
-    document.write(keterangan);
+    document.write("data pembelian" +
+    "<br> pelanggan " + pelanggan +
+    "<br> produk yang dibeli " + produk +
+    "<br> Harga satuan " + hargasatuan +
+    "<br> jumlah barang yang dibeli " + jumlahbeli + 
+    "<br> total harga pembelian " + bruto
+    )
 </script>
