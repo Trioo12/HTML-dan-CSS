@@ -1,0 +1,48 @@
+// deklarasi variabel pegawai, jabatan, dan status
+let namaPegawai = "nama_kalian";
+let jabatan = "manager";
+let status = "menikah";
+
+// deklarasi variabel gaji pokok, tunjangan jabatan, bpjs, dan tunjangan keluarga
+let gajiPokok = 0;
+let tunjanganJabatan = 0;
+let bpjs = 0;
+let tunjanganKeluarga = 0;
+
+// switch case untuk menentukan gaji pokok berdasarkan jabatan
+switch (jabatan) {
+  case "manager":
+    gajiPokok = 10_000_000;
+    break;
+  case "Asisten manager":
+    gajiPokok = 8_000_000;
+    break;
+  case "Staff":
+    gajiPokok = 5_000_000;
+    break;
+  default:
+    gajiPokok = 0;
+    break;
+}
+
+// menghitung tunjangan jabatan dan bpjs
+tunjanganJabatan = 0.1 * gajiPokok;
+bpjs = 0.1 * gajiPokok;
+
+// menghitung tunjangan keluarga jika status menikah
+if (status === "menikah") {
+  tunjanganKeluarga = 0.1 * gajiPokok;
+}
+
+// menghitung total pendapatan atau penghasilan
+let totalPenghasilan = gajiPokok + tunjanganJabatan + tunjanganKeluarga;
+
+// output data pegawai, jabatan, gaji, tunjangan, dan total penghasilan
+console.log("Data Pegawai:");
+console.log("Nama: " + namaPegawai);
+console.log("Jabatan: " + jabatan);
+console.log("Gaji Pokok: " + gajiPokok);
+console.log("Tunjangan Jabatan: " + tunjanganJabatan);
+console.log("BPJS: " + bpjs);
+console.log("Tunjangan Keluarga: " + tunjanganKeluarga);
+console.log("Total Penghasilan: " + totalPenghasilan);
