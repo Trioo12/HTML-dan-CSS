@@ -5,6 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Latihan Java Script</title>
+    <style>
+        body {
+            background-color: #F5F5F5;
+            font-family: sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #kalkulator {
+            background-color: #FFF;
+            margin: 0 auto;
+            max-width: 500px;
+            padding: 20px;
+        }
+
+        #kalkulator input[type="text"] {
+            border: 1px solid #CCC;
+            padding: 10px;
+            width: 100%;
+        }
+
+        #kalkulator button {
+            background-color: #4CAF50;
+            border: none;
+            color: #FFF;
+            cursor: pointer;
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+        }
+
+        #kalkulator button:hover {
+            background-color: #3E8E41;
+        }
+
+        #hasil-label {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #CCC;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
 
 </head>
 <body>
@@ -22,11 +76,11 @@
                <td><input type="text" name="pekerjaan" placeholder="isi pekerjaan anda"></td>
              </tr>
              <tr>
-                <td><label>hobby</label></td>
+                <td><label>Hobby</label></td>
                <td><input type="text" name="hoby" placeholder="isi hobby anda"></td>
              </tr>
              <tr>
-                <th colspan="2"><button onclick="dataPerson()">Submit</button></th>
+                <th colspan="2"><button type="button" onclick="dataPerson()">Submit</button></th>
              </tr>
     </table>
     </form>
